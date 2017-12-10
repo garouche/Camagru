@@ -1,0 +1,510 @@
+body {
+	font-family: Impact, serif;
+	margin-left: 0;
+	margin-right: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+header h1{
+	position: relative;
+	font-family: Impact, serif;
+	font-size: 3vmin;
+	color: ghostwhite;
+	text-shadow: -0.2vmin -0.2vmin 0 black;
+	width: 15vw;
+}
+
+header{
+	background-color: rgba(51, 17, 111, 0.97);
+	position: relative;
+	top: 1vh;
+	width: 100%;
+}
+
+header ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+li{
+	display: inline-block;
+	margin-right: 4vw;
+}
+
+.logo{
+	margin-left: 4vw;
+	float: left;
+}
+
+body a{
+	text-decoration: none;
+	color: 	color: rgba(51, 17, 111, 0.97);
+}
+
+footer{
+	position: relative;
+	text-align: center;
+	bottom: 0;
+	font-family: Impact, serif;
+	font-style: italic;
+	width: 100%;
+	font-size: 1vh;
+	color: white;
+	background-color: rgba(51, 17, 111, 0.97);
+	text-shadow: 0vmin 0vmin 0 black;
+}
+.content{
+	display: flex;
+	position: relative;
+	align-items: center;
+	width: 100%;
+	height: 80vh;
+	text-align: center;
+	color: rgba(51, 17, 111, 0.97);
+}
+.errorMsg{
+	color: #b2020a;
+	font-size: 1.5vmin;
+}
+.login{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 4vmin;
+	width: 25vw;
+}
+
+.login a{
+	font-size: 1.5vmin;
+	text-decoration: underline;
+	color: rgba(51, 17, 111, 0.97);
+}
+.register{
+	margin-right: auto;
+	font-size: 4vmin;
+	width: 30vw;
+}
+fieldset{
+	border: 0.5vmin solid rgba(51, 17, 111, 0.97);
+	border-radius: 10px;
+}
+input, textarea{
+	height: 5vmin;
+	font-style: italic;
+	font-family: Impact, serif;
+	color: rgba(51, 17, 111, 0.97);
+	background-color: rgba(64, 65, 101, 0.74);
+	width: 85%;
+	border: 0.1vmin solid rgba(51, 17, 111, 0.97);
+	font-size: 1.5vmin;
+}
+.submit{
+	background-color: white;
+	color: rgba(51, 17, 111, 0.97);
+	font-style: normal;
+	font-size: 2vmin;
+}
+.mainContent{
+	position: relative;
+	display: flex;
+	height: 55vh;
+	width: 90%;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 0vh;
+	top: 4vh;
+	border: 2px solid rgba(51, 17, 111, 0.97);
+}
+.videoContent{
+	width: 80%;
+	overflow: hidden;
+}
+#videoElement{
+	min-width: 100%;
+	min-height: 100%;
+	left: 0;
+}
+.displayContent{
+	position: relative;
+	float: right;
+	border-left: 2px solid rgba(51, 17, 111, 0.97);
+	width: 30vw;
+	height: auto;
+	overflow: auto;
+	text-align: center;
+}
+.displayContent legend{
+	width: auto;
+	background-color: rgba(51, 17, 111, 0.97);
+	color: ghostwhite;
+	padding: 1%;
+	border-bottom: 1px solid black;
+}
+.montageButton{
+	margin-top: -13.5vh;
+	display: flex;
+	justify-content: space-between;
+	float: right;
+}
+.styleButton{
+	background-color: lightgray;
+	font-family: Impact, serif;
+	font-size: 1.5vmin;
+	border: 2px solid rgba(51, 17, 111, 0.97);
+	text-align: center;
+	color: rgba(51, 17, 111, 0.97);
+	padding: 0.3%;
+	width: 7vw;
+	height: 13vh;
+	cursor: default;
+	margin-right: 3vw;
+}
+
+.montageButton img{
+	top: 0;
+	width: 4vw;
+}
+
+.filtreContainer{
+	display: inline-block;
+	position: relative;
+	height: 19.5vh;
+	width: 90%;
+	margin-top: 5vh;
+	border: 2px solid rgba(51, 17, 111, 0.97);
+}
+canvas{
+	width: 0;
+	height: 0;
+}
+.videoContent img{
+	position: absolute;
+}
+#filtre{
+	margin-top: 12vh;
+	margin-left: 30vw;
+	width: 6vw;
+}
+.stickCursor{
+	border-radius: 10px;
+	border: 2px solid rgba(51, 17, 111, 0.97);
+	width: 7vw;
+	height: 12vh;
+	top: 0;
+	padding-left: 0.9vw;
+	margin-right: 0.5vw;
+	padding-right: 1vw;
+	cursor: pointer;
+}
+
+.mouseFollow{
+	width: 5vw;
+}
+
+.filtreContainer ul{
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 60vw;
+	height: 14vh;
+	margin-top: 2.5vh;
+	margin-bottom: auto;
+	list-style-type: none;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	height: 1vh;
+}
+::-webkit-scrollbar-thumb {
+	background-color: lightgray;
+}
+.filtreContainer li{
+	display: inline-block;
+}
+
+button{
+	border: none;
+	outline:none;
+}
+
+#pic, #upPic{
+}
+
+.minPic{
+	border-radius: 2px;
+	float: left;
+	width: 15vw;
+}
+#publishButton, #eraseButton, #uploadPic{
+	background-color: white;
+	cursor: pointer;
+}
+
+.input-file{
+	cursor: pointer;
+	opacity: 0;
+	right: 3.1vw;
+	bottom: 3.5vh;
+	position: absolute;
+	width: 6.7vw;
+	height: 12.7vh;
+}
+
+.upError{
+	visibility: hidden;
+}
+
+.galeryContent{
+	flex-wrap: wrap;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 98vw;
+	height: 85vh;
+	text-align: center;
+	font-size: 1.5vmin;
+}
+
+.galeryContent ul{
+	top: 0;
+	padding: 0;
+	width: 100%;
+	height: 95%;
+	margin-left: 3.5vw;
+	display: inline-block;
+	list-style-type: none;
+	overflow: auto;
+}
+.galeryContent li{
+	vertical-align: top;
+	border: 1px outset rgba(51, 17, 111, 0.97);
+	border-radius: 2px;
+	margin-top: 2.5vh;
+	top: 0;
+	font-size: 1.5vmin;
+	width: 25vmin;
+	text-align: center;
+}
+
+.galeryContent p, a{
+	margin-top: 4%;
+	width: 100%;
+	text-align: center;
+	color: rgba(51, 17, 111, 0.97);
+}
+.galeryContent img{
+	width: 100%;
+	padding: 0;
+	vertical-align: center;
+	display: block;
+}
+
+.galeryImgContainer{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.clickzone{
+	position: absolute;
+	background-color: transparent;
+	width: 63vw;
+	height: 47vh;
+}
+.displayImgContainer img{
+	border: 1px solid rgba(51, 17, 111, 0.97);
+}
+
+.displayImgContainer{
+	visibility: hidden;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top : 2.5vh;
+	display: flex;
+}
+
+.commentContainer{
+	margin-top: 0;
+	border-radius: 3px;
+	width: 50vw;
+	height: 25vmin;
+	font-size: 1.3vmin;
+	overflow: auto;
+}
+
+.commentContainer li{
+	color: rgba(51, 17, 111, 0.97);
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding: 3%;
+	word-wrap: break-word;
+	border-bottom: 1px solid rgba(51, 17, 111, 0.97);
+}
+#rightArrow{
+	border: none;
+	width: 5vw;
+	cursor: pointer;
+}
+
+#leftArrow{
+	border: none;
+	width: 5vw !important;
+	height: auto;
+	cursor: pointer;
+}
+
+.bottomDisplayImg h3 {
+	background-color: rgba(51, 17, 111, 0.97);
+	color: ghostwhite;
+	padding: 5px;
+	height: 2vh;
+	font-size: 1.8vmin;
+}
+
+.bottomDisplayImg{
+	display: flex;
+	margin-top: 3.5vh;
+	width: 100%;
+	height: 25vh;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.bottomDisplayImg ul{
+	padding: 0;
+}
+
+.bottomDisplayImg form{
+	margin-left: 1vw;
+}
+
+.bottomDisplayImg textarea{
+	width: 44.5vw;
+	height: 10vh;
+}
+
+#commentForm{
+	width: 45vw;
+}
+
+#commentForm button{
+	background-color: rgba(51, 17, 111, 0.97);
+	color: white;
+	border: 1px solid black;
+	float: right;
+}
+
+#commentForm textarea{
+	resize: none;
+}
+#likes{
+	display: inline-flex;
+	justify-content: space-around;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3vh;
+	width: 50%;
+	color: rgba(51, 17, 111, 0.97);
+}
+
+#likeButton, #deleteButton{
+	font-family: Impact, serif;
+	font-size: 1.5vmin;
+	border: 2px solid rgba(51, 17, 111, 0.97);
+	text-align: center;
+	color: rgba(51, 17, 111, 0.97);
+	height: 5vh;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#displayImage{
+	max-width: calc(100% - 20vw);
+	max-height: 100%;
+}
+
+.forgotPassContainer{
+	padding: 5px;
+	color: rgba(51, 17, 111, 0.97);
+	border: 2px solid rgba(51, 17, 111, 0.97);
+	width: 50%;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.forgotPassContainer button{
+	cursor: pointer;
+}
+
+#checkbox{
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+#checkbox input{
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.forgotPassContainer form{
+	width: 80%;
+}
+.forgotPassContainer button{
+	background-color: rgba(51, 17, 111, 0.97);
+	color: white;
+	width: 50%;
+}
+
+.forgotPassContainer p{
+	width: 100%;
+}
+
+.resetContainer{
+	position: relative;
+	background-color: red;
+	height: 80vh;
+}
+
+::-webkit-input-placeholder {
+	color: rgba(51, 17, 111, 0.97);
+}
+
+::-moz-placeholder{
+	color: rgba(51, 17, 111, 0.97);
+}
+
+:-moz-placeholder{
+	color: rgba(51, 17, 111, 0.97);
+}
+
+.forgotContainer{
+	height: 85vh;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.validAccMsg{
+	font-size: 2vmin;
+	color: green;
+}
