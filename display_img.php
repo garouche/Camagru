@@ -133,7 +133,7 @@
 
     <form method="post" id="commentForm" action="./addcomment.php">
         <h3>Ajouter un commentaire</h3>
-        <textarea name="comment"></textarea>
+        <textarea maxlength="150" name="comment"></textarea>
         <input type="hidden" name="imgId" value="<?= $_POST["displayImage"]; ?>">
         <button name="submit" value="submit">Ajouter</button>
 </form>

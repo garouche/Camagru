@@ -7,7 +7,7 @@
     }
     include ("./db_connect.php");
     $img = $_POST["imgId"];
-    if (isset($_POST["imgId"]) && isset($_POST["comment"]) && isset($_POST["submit"]) && $_POST["submit"] == "submit" && $_POST["comment"] != ""){
+    if (isset($_POST["imgId"]) && isset($_POST["comment"]) && strlen($_POST["comment"]) <= 150 && isset($_POST["submit"]) && $_POST["submit"] == "submit" && $_POST["comment"] != ""){
         $req = $db->prepare("INSERT INTO comments (img_id, comment, userid) VALUES (?, ?, ?)");
         $req->execute(array(htmlspecialchars($_POST["imgId"]), htmlspecialchars($_POST["comment"]), htmlspecialchars($_SESSION["userId"])));
 

@@ -43,8 +43,8 @@
     <form class="login" action="./loginUser.php" method="post">
         <fieldset>
             <legend>Se Connecter</legend><br />
-        <input type="text" name="login" placeholder="Identifiant*"><br />
-        <input type="password" name="passwd" placeholder="Mot de passe*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br />
+        <input maxlength="25" type="text" name="login" placeholder="Identifiant*"><br />
+        <input maxlength="25" type="password" name="passwd" placeholder="Mot de passe*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br />
             <?php if (isset($_GET["error"]) && ($_GET["error"] == 5 || $_GET["error"] == 6)) echo ('<p class="errorMsg">'.$error.'</p>'); ?>
             <a href="./forgottenPassword.php"><p>Mot de passe oublie</p></a></p>
             <p style="font-size: 1.5vmin;">* Champs obligatoires</p>
@@ -55,9 +55,9 @@
         <fieldset>
             <legend>Creer un compte</legend>
             <p class="validAccMsg"><?= $msg; ?></p>
-            <input type="text" name="login" placeholder="Identifiant*"><br />
-            <input type="password" name="passwd" placeholder="Mot de passe*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br />
-            <input type="email" name="mail" placeholder="E-mail*"><br />
+            <input  maxlength="25" type="text" name="login" placeholder="Identifiant*"><br />
+            <input maxlength="25" type="password" name="passwd" placeholder="Mot de passe*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br />
+            <input maxlength="40" type="email" name="mail" placeholder="E-mail*"><br />
             <?php if (isset($_GET["error"]) && ($_GET["error"] != 5 && $_GET["error"] != 6)) echo ('<p class="errorMsg">'.$error.'</p>'); ?>
             <p style="font-size: 1.5vmin;">* Champs obligatoires</p>
             <input class="submit" name="submit" type="submit" value="Creer un compte">
