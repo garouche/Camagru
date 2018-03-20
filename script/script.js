@@ -84,7 +84,6 @@ window.onload = function() {
             listFilter[i].style.cursor = "default";
             listFilter[i].style.backgroundColor = "lightgray";
         }
-        ;
     }
 
     function addClickFilter() {

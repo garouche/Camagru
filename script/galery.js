@@ -13,8 +13,7 @@ window.onload =  function(){
             });
             imgContainer[i].style.cursor = "pointer";
         }
-        ;
     }
 
 
-}
+};
