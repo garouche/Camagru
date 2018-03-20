@@ -22,7 +22,7 @@ function validPass()
 {
     global $db;
 
-    if (check_pw()) {
+    if (isset($_POST["passwd"]) && strlen($_POST["passwd"]) <= 25 && check_pw()) {
         $pass = password_hash(htmlspecialchars($_POST["passwd"]), PASSWORD_BCRYPT);
         $req = $db->prepare("UPDATE users SET passwd = ?, hash = NULL WHERE userid = ?");
         $req->execute(array($pass, $_SESSION["userId"]));

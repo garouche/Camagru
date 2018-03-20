@@ -69,17 +69,17 @@
     <h2>Modification du compte</h2><br /><br /><br />
     <form method="post" action="./changeLogin.php">
         Login: <?= $login; ?><br /><p class="displayMsg"><?= displayMsg(1);?></p>
-        <input type="text" name="login" pattern="^[a-z\d\.]{5,}$">
+        <input type="text" maxlength="25" name="login" pattern="^[a-z\d\.]{5,}$">
         <button name="submit" value="submit">Modifier</button><br /><br />
     </form>
-    <form method="post" action="./changePass.php">
+    <form method="post"  action="./changePass.php">
         Mot de passe<br /><p class="displayMsg"><?= displayMsg(2);?></p>
-        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="passwd">
+        <input maxlength="25" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="passwd">
         <button name="submit" value="submit">Modifier</button><br /><br />
     </form>
     <form method="post" action="./changeMail.php">
         Adresse Mail<br /><p class="displayMsg"><?= displayMsg(3);?></p>
-        <input type="email" name="mail">
+        <input type="email" maxlength="40" name="mail">
         <button name="submit" value="submit">Modifier</button><br /><br />
     </form>
     <form method="post" action="./notif.php" id="checkbox"><p>Notifications</p>

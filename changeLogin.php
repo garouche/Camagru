@@ -19,7 +19,7 @@
             return true;
     }
 
-    if (check_log() && strlen(htmlspecialchars($_POST["login"])) >= 6){
+    if (isset($_POST["login"]) && strlen($_POST["login"]) <= 25 && check_log() && strlen(htmlspecialchars($_POST["login"])) >= 6){
         $req = $db->prepare("UPDATE users SET login = ? WHERE userid = ?");
         $req->execute(array(htmlspecialchars($_POST["login"]), $_SESSION["userId"]));
         header("Location: ./account.php?msg=1");
