@@ -1,7 +1,13 @@
 <?php
     require_once ("./database.php");
 
-    $db = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
+    try {
+        $db = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
+    }catch(PDOException $e){
+        echo get_class($e);
+        echo $e->getMessage();die;
+    }
+
     $sql = "CREATE DATABASE camagru;
             USE camagru;
             CREATE TABLE users (
