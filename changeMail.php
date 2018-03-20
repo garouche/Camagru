@@ -26,7 +26,7 @@ function checkCurMail($mail){
 function check_email(){
     global $db;
 
-    if (check_emailFilter()) {
+    if (isset($_POST["mail"]) && strlen($_POST["mail"]) <= 40 && check_emailFilter()) {
         $req = $db->prepare("SELECT email FROM users WHERE email= ?");
         $req->execute(array(htmlspecialchars($_POST["mail"])));
         $mail = $req->fetch();
